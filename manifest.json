@@ -1,0 +1,86 @@
+{
+  "id": "iss_tracker",
+  "name": "ISS Tracker",
+  "version": "0.1.0",
+  "description": "Display the real-time position and altitude of the International Space Station.",
+  "author": "FiestaBoard Team",
+  "icon": "satellite",
+  "category": "data",
+  "repository": "https://github.com/Fiestaboard/fiestaboard-plugin--iss-tracker",
+  "documentation": "README.md",
+  "min_refresh_seconds": 60,
+  "settings_schema": {
+    "type": "object",
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "title": "Enabled",
+        "default": false
+      },
+      "refresh_seconds": {
+        "type": "integer",
+        "title": "Refresh Interval (seconds)",
+        "description": "How often to fetch ISS position.",
+        "default": 60,
+        "minimum": 30
+      }
+    },
+    "required": []
+  },
+  "variables": {
+    "groups": {
+      "position": {
+        "label": "Position"
+      },
+      "motion": {
+        "label": "Motion"
+      }
+    },
+    "simple": {
+      "latitude": {
+        "description": "Current latitude in decimal degrees",
+        "type": "number",
+        "max_length": 10,
+        "group": "position",
+        "example": "51.50"
+      },
+      "longitude": {
+        "description": "Current longitude in decimal degrees",
+        "type": "number",
+        "max_length": 10,
+        "group": "position",
+        "example": "-0.13"
+      },
+      "altitude_km": {
+        "description": "Altitude above Earth in km",
+        "type": "number",
+        "max_length": 8,
+        "group": "motion",
+        "example": "408.3"
+      },
+      "velocity_kph": {
+        "description": "Speed in km/h",
+        "type": "number",
+        "max_length": 8,
+        "group": "motion",
+        "example": "27600"
+      },
+      "visibility": {
+        "description": "daylight or eclipsed",
+        "type": "string",
+        "max_length": 10,
+        "group": "position",
+        "example": "daylight"
+      }
+    }
+  },
+  "screenshots": [
+    {
+      "src": "docs/board-display.png",
+      "alt": "ISS Tracker displayed on a Vestaboard",
+      "caption": "Example board output using the default template",
+      "primary": true
+    }
+  ],
+  "api_docs": "https://wheretheiss.at/w/developer"
+}
