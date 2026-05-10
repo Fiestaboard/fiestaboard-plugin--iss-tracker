@@ -1,7 +1,7 @@
 {
   "id": "iss_tracker",
   "name": "ISS Tracker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Display the real-time position and altitude of the International Space Station.",
   "author": "FiestaBoard Team",
   "icon": "satellite",
@@ -82,5 +82,47 @@
       "primary": true
     }
   ],
-  "api_docs": "https://wheretheiss.at/w/developer"
+  "api_docs": "https://wheretheiss.at/w/developer",
+  "demo": {
+    "name": "ISS Tracker Demo",
+    "device_type": "flagship",
+    "config": {
+      "enabled": true,
+      "refresh_seconds": 60
+    },
+    "template": [
+      "ISS Tracker",
+      "",
+      "Lat: {{iss_tracker.latitude}}",
+      "Lon: {{iss_tracker.longitude}}",
+      "Alt: {{iss_tracker.altitude_km}} km",
+      "Spd: {{iss_tracker.velocity_kph}} kph"
+    ],
+    "line_metadata": [
+      {
+        "alignment": "center",
+        "wrap": false
+      },
+      {
+        "alignment": "left",
+        "wrap": false
+      },
+      {
+        "alignment": "left",
+        "wrap": false
+      },
+      {
+        "alignment": "left",
+        "wrap": false
+      },
+      {
+        "alignment": "left",
+        "wrap": false
+      },
+      {
+        "alignment": "left",
+        "wrap": false
+      }
+    ]
+  }
 }
