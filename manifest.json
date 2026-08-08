@@ -98,9 +98,9 @@
     {
       "device_type": "note",
       "rows": [
-        "ISS TRACKER",
-        "LAT 51.50",
-        "LON -0.13"
+        "{67}{67} ISS TRACKER",
+        "LAT 51.50 N",
+        "LON  0.13 W"
       ]
     }
   ],
