@@ -82,6 +82,28 @@
       "primary": true
     }
   ],
+  "teaser": "ISS 51.5N 0.1W",
+  "previews": [
+    {
+      "device_type": "flagship",
+      "rows": [
+        "     ISS Tracker",
+        "",
+        "Lat: 51.50",
+        "Lon: -0.13",
+        "Alt: 408.3 km",
+        "Spd: 27600 kph"
+      ]
+    },
+    {
+      "device_type": "note",
+      "rows": [
+        "ISS TRACKER",
+        "LAT 51.50",
+        "LON -0.13"
+      ]
+    }
+  ],
   "api_docs": "https://wheretheiss.at/w/developer",
   "demo": {
     "flagship": {
